@@ -1,3 +1,19 @@
+#shorten-input::-webkit-input-placeholder {
+   color: #DADADA;
+}
+
+#shorten-input:-moz-placeholder { /* Firefox 18- */
+   color: #DADADA;  
+}
+
+#shorten-input::-moz-placeholder {  /* Firefox 19+ */
+   color: #DADADA;  
+}
+
+#shorten-input:-ms-input-placeholder {  
+   color: #DADADA;  
+}
+
 h1 {
     text-align: center;
     margin-bottom: 1em;
@@ -7,7 +23,7 @@ h1 {
 output { text-align: center; }
 
 .put-the-dang-thing-in-the-middle {
-    width: 80%;
+    /*width: 80%;*/
     height: 50%;
     margin: auto;
     position: absolute;
@@ -15,11 +31,14 @@ output { text-align: center; }
 }
 
 #shorten-input {
-    width: 80%;
     height: 70px;
-    margin: auto;
-    color: #999;
+    color: #353535;
     font-size: 1.9em;
+}
+
+#shorten-input + .input-group-btn > .btn{
+    height: 70px;
+    color: #353535;
 }
 
 .error {
@@ -28,3 +47,4 @@ output { text-align: center; }
     text-align: center;
     margin-top: 1em;
 }
+
