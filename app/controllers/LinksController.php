@@ -32,11 +32,19 @@ class LinksController extends BaseController {
             return Redirect::home()->withErrors($e->getErrors())->withInput();
         }
 
-        return Redirect::home()->with([
-            'flash_message' => 'Here you go! ' . link_to($hash),
-            'hashed'        => $hash
-        ]);
+        if (Input::has('_token')) {
+            return Redirect::home()->with([
+                'flash_message' => 'Here you go! ' . link_to($hash),
+                'hashed'        => $hash
+            ]);
+        }
+        else { // API
+            if (Input::get('format') == 'json' OR !Input::has('format')) {
+                return json_encode(URL::to($hash));
+            }
+        }
     }
+    
 
     /**
      * Accept hash, and fetch url
