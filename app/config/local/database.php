@@ -5,9 +5,9 @@ return [
         'mysql' => [
             'driver'    => 'mysql',
             'host'      => 'localhost',
-            'database'  => 'larademos',
+            'database'  => 'urlshort',
             'username'  => 'root',
-            'password'  => '1234',
+            'password'  => '',
             'charset'   => 'utf8',
             'collation' => 'utf8_unicode_ci',
             'prefix'    => '',

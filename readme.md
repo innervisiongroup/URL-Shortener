@@ -1,3 +1,3 @@
-A live demo of the finished product can be viewed here:
+This is a fork of https://github.com/laracasts/URL-Shortener
 
-[http://laracasts-url.eu1.frbit.net/](http://laracasts-url.eu1.frbit.net/)
+Added features : API
