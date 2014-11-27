@@ -16,9 +16,28 @@
                     </div>
                     {{ $errors->first('url', '<div class="error">:message</div>') }}
                 {{ Form::close() }}
+
             
                 @if (Session::has('hashed'))
-                    <output>{{ link_to(Session::get('hashed')) }}</output>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-4 col-md-offset-4">
+                            <div class="well well-sm">
+                                <output>{{ link_to(Session::get('hashed')) }}</output>
+                            </div>
+                        </div>
+                    </div>
+                @endif
+
+                @if (Session::has('tags'))
+                    <div class="panel panel-default">
+                        <div class="panel-heading">Hashtag suggestion</div>
+                        <div class="panel-body">
+                            @foreach (Session::get('tags') as $word => $count)
+                                #{{ $word }}
+                            @endforeach
+                        </div>
+                    </div>
                 @endif
             </div>
         </div>
